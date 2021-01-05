@@ -15,8 +15,3 @@ for i in doss:
         for ligne in domainAct:
             outfile.write(ligne)
     print('Le fichier', i, 'a été traité : le nouveau fichier s\'appelle', name, 'et se trouve dans le dossier \'dataset_new\'')
-'''
-README
-Parcours du dossier contenant les trois fichiers CSV composant le corpus. 
-Pour chaque fichier, si la ligne contient 'domainActivities' (colonne 1 : Dimension), alors on l'ajoute à la liste qu'on copie ensuite dans la nouvelle version du fichier
-'''
