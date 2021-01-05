@@ -11,10 +11,10 @@ Parcours du dossier contenant les trois fichiers CSV composant le corpus. Pour c
 
 ## SetFeatures_MachineLearning :
 ### Outils :
-Scikit-Learn
-Pandas
-SpaCy
-Expression régulière (module re)
+Scikit-Learn\
+Pandas\
+SpaCy\
+Expression régulière (module re)\
 Glob
 
 Mise en place des features : 
