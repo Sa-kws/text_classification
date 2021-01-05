@@ -7,8 +7,7 @@ Avant de mettre en place les paramètres d'apprentissage ainsi que lancer l'appr
 Parcours du dossier contenant les trois fichiers CSV composant le corpus. Pour chaque fichier, si la ligne contient *'domainActivities'* (colonne 1 : Dimension), alors on l'ajoute à la liste qu'on copie ensuite dans la nouvelle version du fichier
 
 ## SetFeatures_MachineLearning :
-Outils :
----
+##### Outils :
 Scikit-Learn
 Pandas
 SpaCy
@@ -24,6 +23,5 @@ Mise en place des features :
   - Présence de proposition relatives
   - Lemme (Bag of Words)
 
-Machine Learning :
----
+## Machine Learning :
 Algorithme : Random Forest
