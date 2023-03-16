@@ -1,5 +1,8 @@
 import time
-begin = time.time()
+begin_time = time.time()
+
+
+# MODULES IMPORT
 
 import pandas as pd # Pour la manipulation des données
 
@@ -14,26 +17,32 @@ import glob # Pour le parcours des fichiers
 import re # Pour le repérage de ponctuations spécifique + digit
 
 
+# VARIABLES
 
-
-doss = glob.glob('dataset_DA//*')
+dossier = glob.glob('dataset_DA//*')
 nlp = spacy.load('fr_core_news_lg')
 
+
 # Extraction des énoncés + annotations de la dimension 'domainActivities'
-for fichier in doss:
+for fichier in dossier:
+    
     name = fichier.replace('dataset_DA\\', '')
     print(name, 'est en cours de traitement...')
+    
     with open(fichier, 'r', encoding='utf-8') as infile:
         data, fonction = [], []
+        
         for i in infile:
             ligne = i.split('\t')
             ph = ligne[10].replace('<p>', '')
             ph = ph.replace('</p>', '')
             data.append(ph)
+            
             if ligne[1] in fonction:
                 pass
             else:
                 fonction.append(ligne[1])
+                
     print('\tLa longueur des données est de', len(data),'énoncé.s.')
     # Création du dictionnaire contenant les fonctions et leur encodage :
     dic_fonction, cle = {}, 0
@@ -168,7 +177,9 @@ for fichier in doss:
 
     print('\t',classification_report(y_test, pred, zero_division=0))
 
-end = time.time()
-temps = end-begin
-minutes = round((temps / 60),2)
-print('Temps d\'execution : '+str(minutes)+' minute.s.')
+
+end_time = time.time()
+
+hours, rem = divmod(end_time-begin_time, 3600)
+minutes, seconds = divmod(rem, 60)
+print("{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
