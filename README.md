@@ -1,6 +1,7 @@
 # text_classification
 Classification d'énoncés en plusieurs catégories. 
-Il s'agit d'une tentative de reproduction d'une sous-tâche effectuée par Soufian Salim, Nicolas Hernandez et Emmanuel Morin dans le cadre de la thèse de Soufian Salim. Les données étant la propriété de ce dernier, elles doivent être réclamées et non distribuées. 
+Il s'agit d'une tentative de reproduction d'une sous-tâche effectuée par Soufian Salim, Nicolas Hernandez et Emmanuel Morin dans le cadre de la thèse de Soufian Salim.\ 
+Les données étant la propriété de ce dernier, elles doivent être réclamées et non distribuées. \
 Lien des travaux originaux : http://talnarchives.atala.org/TALN/TALN-2016/29.pdf
 
 Avant de mettre en place les paramètres d'apprentissage ainsi que lancer l'apprentissage, il faut récupérer le bon jeu de données. Le code *'GetDomainActivities'* est donc à executer en premier, puis on pourra ensuite executer *'SetFeatures_MachineLearning'*.
